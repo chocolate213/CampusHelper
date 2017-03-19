@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_home">Home</string>
+    <string name="tab_contacts">Concats</string>
+    <string name="tab_discover">Discover</string>
+    <string name="tab_me">Me</string>
+    <string name="welcome">Welcome  Image</string>
+    <string name="prompt_account">Username/Email/Phone</string>
+    <string name="prompt_password">Password</string>
+    <string name="is_landing">Landing...</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="login_directly">"  Login Directly  "</string>
+    <string name="application_name">Campus Helper</string>
+    <string name="app_name">Campus Helper</string>
+    <string name="img_tag">img</string>
+    <string name="tp_weixin">WeChat</string>
+    <string name="tp_qq">QQ</string>
+    <string name="tp_weibo">Weibo</string>
+    <string name="forget_password">forget password?</string>
+    <string name="new_for_register">register</string>
+    <string name="prompt_email_or_phone">Email/Phone</string>
+    <string name="prompt_forget_pwd_text">请输入你的手机号或邮箱地址</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="action_next_step">Next Stap</string>
+    <string name="title_activity_forget_password">Forget Password</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_phone_number">Phone</string>
+    <string name="prompt_verify_code">Verify Code</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="title_activity_register_with_email">Register With Email</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_register_with_phone">Register With Phone</string>
+    <string name="title_activity_welcome">Welcome</string>
+    <string name="regist_with_phone_text">Regist With Phone</string>
+    <string name="regist_with_email_text">Register with phone</string>
+    <string name="action_confirm_sign_up">Confirm Sign up</string>
+    <string name="title_activity_confirm_email">Confirm Email</string>
+    <string name="text_please_confirm_email">请确认注册邮箱：</string>
+    <string name="text_error_email_return">邮箱有问题？返回上一步</string>
+    <string name="get_verify_code">获取验证码</string>
+    <string name="after_second_resend">%d S后重发</string>
+    <string name="title_input_password">Phone Sign up</string>
+    <string name="text_this_is_the_login_password">该密码将用于登陆你的校园助手账号</string>
+</resources>

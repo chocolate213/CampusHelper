@@ -1,0 +1,68 @@
+<resources>
+    <string name="application_name">CampusHelper</string>
+
+    <string name="tab_home">主页</string>
+    <string name="tab_contacts">通讯录</string>
+    <string name="tab_discover">发现</string>
+    <string name="tab_me">我</string>
+
+    <string name="menu_1">Menu 1</string>
+    <string name="menu_2">Menu 2</string>
+    <string name="menu_3">Menu 3</string>
+    <string name="menu_4">Menu 4</string>
+    <string name="menu_5">Menu 5</string>
+
+
+    <string name="welcome">首屏图</string>
+
+    <string name="title_activity_welcome">Welcome Activity</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_register_with_email">RegisterWithEmailActivity</string>
+    <string name="title_activity_register_with_phone">RegisterWithPhoneActivity</string>
+    <string name="title_activity_forget_password">ForgetPasswordActivity</string>
+    <string name="title_activity_log">Sign in</string>
+    <string name="title_activity_confirm_email">ConfirmEmailActivity</string>
+    <string name="title_input_password">Phone Sign up</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_account">Username/Email/Phone Number</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_email_or_phone">Email/Phone</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="is_landing">Landing...</string>
+    <string name="login_directly">  直接登陆  </string>
+    <string name="app_name">Campus Helper</string>
+    <string name="img_tag">img</string>
+    <string name="tp_weixin">WeChat</string>
+    <string name="tp_qq">QQ</string>
+    <string name="tp_weibo">Weibo</string>
+    <string name="forget_password">忘记密码?</string>
+    <string name="new_for_register">新用户注册</string>
+
+    <string name="prompt_forget_pwd_text">请输入你的手机号或邮箱地址:</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="action_next_step">Next Stap</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_phone_number">Phone</string>
+    <string name="prompt_verify_code">Verify Code</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="regist_with_phone_text">Regist With Phone</string>
+    <string name="regist_with_email_text">Register with phone</string>
+
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="action_confirm_sign_up">Confirm Sign up</string>
+    <string name="text_please_confirm_email">请确认注册邮箱：</string>
+    <string name="text_error_email_return">邮箱有问题？返回上一步</string>
+    <string name="get_verify_code">获取验证码</string>
+    <string name="after_second_resend">%d S后重发</string>
+    <string name="text_this_is_the_login_password">该密码将用于登陆你的校园助手账号</string>
+
+</resources>
