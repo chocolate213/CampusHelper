@@ -8,6 +8,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.lzy.okgo.OkGo;
+import com.lzy.okgo.cookie.store.PersistentCookieStore;
+
 import butterknife.ButterKnife;
 
 /**
@@ -25,12 +28,14 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getContentView());
         ButterKnife.bind(this);
+        OkGo.init(this.getApplication());
+        OkGo.getInstance().setCookieStore(new PersistentCookieStore());
     }
 
     protected abstract int getContentView();
 
     public void showErrorDialog(String message, Context context) {
-        Log.v("log","log");
+        Log.v("log", "log");
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setMessage(message).setPositiveButton("确定", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {

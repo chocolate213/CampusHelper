@@ -13,7 +13,7 @@ import butterknife.OnClick;
 import cn.jxzhang.campushelper.R;
 import cn.jxzhang.campushelper.base.BaseAppCompatActivity;
 import cn.jxzhang.campushelper.constant.IdentityType;
-import cn.jxzhang.campushelper.constant.RequestAddress;
+import cn.jxzhang.campushelper.constant.Urls;
 import cn.jxzhang.campushelper.model.ResponseMessage;
 import cn.jxzhang.campushelper.model.User;
 import cn.jxzhang.campushelper.util.DigestUtils;
@@ -76,7 +76,7 @@ public class InputPasswordActivity extends BaseAppCompatActivity {
 
         Log.d("sign up : ", user.toString());
 
-        OkGo.post(RequestAddress.SIGN_UP.value())
+        OkGo.post(Urls.SIGN_UP.value())
                 .tag(this)
                 .upJson(JsonUtils.toJson(user))
                 .execute(new StringCallback() {

@@ -17,10 +17,11 @@ import butterknife.OnTextChanged;
 import cn.jxzhang.campushelper.R;
 import cn.jxzhang.campushelper.base.BaseAppCompatActivity;
 import cn.jxzhang.campushelper.constant.IdentityType;
-import cn.jxzhang.campushelper.constant.RequestAddress;
+import cn.jxzhang.campushelper.constant.Urls;
 import cn.jxzhang.campushelper.model.ResponseMessage;
 import cn.jxzhang.campushelper.model.User;
 import cn.jxzhang.campushelper.util.JsonUtils;
+import cn.jxzhang.campushelper.util.ToastUtils;
 import okhttp3.Call;
 import okhttp3.Response;
 
@@ -30,9 +31,9 @@ public class RegisterWithPhoneActivity extends BaseAppCompatActivity {
 
     private static final long COUNT_DOWN_STEP = 1 * 1000;
 
-    private static final int VERIFY_CODE_LENGTH = 4;
+    private static final int VERIFY_CODE_LENGTH = 6;
 
-    private static final String CURRECT_VERIFY_CODE = "1234";
+    private static boolean SEND_VERIFY_CODE_FLAG = false;
 
     @BindView(R.id.regist_phone)
     EditText mPhoneNumber;
@@ -81,50 +82,75 @@ public class RegisterWithPhoneActivity extends BaseAppCompatActivity {
         User user = new User();
         user.setIdentifier(mPhoneNumber.getText().toString());
         user.setIdentityType(IdentityType.PHONE.value());
-        OkGo.post(RequestAddress.IS_ACCOUNT_EXIST.value())
+        OkGo.post(Urls.IS_ACCOUNT_EXIST.value())
                 .tag(this)
                 .upJson(JsonUtils.toJson(user))
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(String s, Call call, Response response) {
                         ResponseMessage result = JsonUtils.fromJson(s, ResponseMessage.class);
-                        if(result.isSuccess()) {
+                        if (result.isSuccess()) {
                             if ((boolean) result.getResult()) {
-                                showErrorDialog("手机号已经注册",RegisterWithPhoneActivity.this);
+                                showErrorDialog("手机号已经注册", RegisterWithPhoneActivity.this);
                             } else {
                                 setGetVerifyCodeWidgetClickable(false);
                                 sendVerifyCode();
                                 timer.start();
                             }
                         } else {
-                            showErrorDialog(result.getMessage(),RegisterWithPhoneActivity.this);
+                            showErrorDialog(result.getMessage(), RegisterWithPhoneActivity.this);
                         }
                     }
 
                     @Override
                     public void onError(Call call, Response response, Exception e) {
                         super.onError(call, response, e);
-                        showErrorDialog(e.getMessage(),RegisterWithPhoneActivity.this);
+                        showErrorDialog(e.getMessage(), RegisterWithPhoneActivity.this);
                     }
 
                 });
     }
 
     private void sendVerifyCode() {
-
+        String phone = mPhoneNumber.getText().toString();
+        OkGo.get(Urls.SEND_VERIFY_CODE.value() + "/" + phone)
+                .tag(this)
+                .execute(new StringCallback() {
+                    @Override
+                    public void onSuccess(String s, Call call, Response response) {
+                        ResponseMessage result = JsonUtils.fromJson(s, ResponseMessage.class);
+                        if (result.isSuccess()) {
+                            if (result.getResult() instanceof String) {
+                                String code = (String) result.getResult();
+                                ToastUtils.toast(RegisterWithPhoneActivity.this, "自动识别短信验证码 ： " + code);
+                                SEND_VERIFY_CODE_FLAG = true;
+                            } else {
+                                showErrorDialog("验证码请求失败", RegisterWithPhoneActivity.this);
+                            }
+                        } else {
+                            showErrorDialog(result.getMessage(), RegisterWithPhoneActivity.this);
+                        }
+                    }
+                });
     }
 
     @OnClick(R.id.submit_regist_phone)
     public void signUp() {
+        String phone = mPhoneNumber.getText().toString();
         String inputVerifyCode = mVerifyCode.getText().toString();
-        if (!TextUtils.isEmpty(inputVerifyCode) && inputVerifyCode.length() == VERIFY_CODE_LENGTH) {
-            if(verifyVerifyCode(inputVerifyCode)) {
-                timer.cancel();
-                goInputPassword();
-            } else {
-                showErrorDialog("验证码错误，请重新输入",RegisterWithPhoneActivity.this);
-            }
+
+        if (!SEND_VERIFY_CODE_FLAG) {
+            return;
         }
+
+        if (isFieldLegal(phone, inputVerifyCode)) {
+            verifyVerifyCode(inputVerifyCode);
+        }
+    }
+
+    private boolean isFieldLegal(String phone, String inputVerifyCode) {
+        Log.d("phone", phone + ":" + inputVerifyCode);
+        return !TextUtils.isEmpty(inputVerifyCode) && inputVerifyCode.length() == VERIFY_CODE_LENGTH && !TextUtils.isEmpty(phone) && phone.length() == 11 && phone.startsWith("1");
     }
 
     private void goInputPassword() {
@@ -135,8 +161,25 @@ public class RegisterWithPhoneActivity extends BaseAppCompatActivity {
         finish();
     }
 
-    private boolean verifyVerifyCode(String inputVerifyCode) {
-        return CURRECT_VERIFY_CODE.equals(inputVerifyCode);
+    private void verifyVerifyCode(String inputVerifyCode) {
+        String phone = mPhoneNumber.getText().toString();
+        OkGo.get(Urls.VERIFY_VERIFY_CODE.value() + "/" + phone + "/" + inputVerifyCode)     // 请求方式和请求url
+                .tag(this)
+                .execute(new StringCallback() {
+                    @Override
+                    public void onSuccess(String s, Call call, Response response) {
+                        ResponseMessage result = JsonUtils.fromJson(s, ResponseMessage.class);
+                        if (result.isSuccess()) {
+                            if ((boolean) result.getResult()) {
+                                goInputPassword();
+                            } else {
+                                showErrorDialog("验证码输入错误，请重新输入", RegisterWithPhoneActivity.this);
+                            }
+                        } else {
+                            showErrorDialog(result.getMessage(), RegisterWithPhoneActivity.this);
+                        }
+                    }
+                });
     }
 
     private CountDownTimer timer = new CountDownTimer(COUNT_DOWN_TIME, COUNT_DOWN_STEP) {
@@ -152,7 +195,7 @@ public class RegisterWithPhoneActivity extends BaseAppCompatActivity {
         }
     };
 
-    private void setGetVerifyCodeWidgetClickable(boolean clickable){
+    private void setGetVerifyCodeWidgetClickable(boolean clickable) {
         if (clickable) {
             mGetVerifyCode.setTextColor(getResources().getColor(R.color.colorPrimary));
             mGetVerifyCode.setBackgroundResource(R.drawable.verify_code_text_active);

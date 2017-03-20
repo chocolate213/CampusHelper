@@ -4,22 +4,22 @@ import android.util.Log;
 
 /**
  * Created on 2017-03-18 00:37
- * <p>Title:       RequestAddress</p>
+ * <p>Title:       Urls</p>
  * <p>Description: [Description]</p>
  *
  * @author <a href=zhangjx_dev@163.com>j.x.zhang</a>
  * @version 1.0
  */
 
-public enum RequestAddress {
+public enum Urls {
 
     IS_ACCOUNT_EXIST("/account/isAccountExist"),
 
-    LOGIN("/account/login"),
+    SIGN_UP("/account/signUp"),
 
-    SAVE_USER("/account/saveUser"),
+    SEND_VERIFY_CODE("/account/verifyCode/generateVerifyCode"),
 
-    SIGN_UP("/account/signUp");
+    VERIFY_VERIFY_CODE("/account/verifyCode/verifyVerifyCode");
 
     private final String value;
 
@@ -27,7 +27,7 @@ public enum RequestAddress {
 
     private final String SERVER_CONTEXT_PATH = "CampusHelper";
 
-    RequestAddress(String value) {
+    Urls(String value) {
         this.value = value;
     }
 

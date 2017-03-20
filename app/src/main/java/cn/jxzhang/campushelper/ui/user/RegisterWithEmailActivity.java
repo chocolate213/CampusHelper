@@ -16,7 +16,7 @@ import cn.jxzhang.campushelper.R;
 import cn.jxzhang.campushelper.base.BaseAppCompatActivity;
 import cn.jxzhang.campushelper.constant.IdentityType;
 import cn.jxzhang.campushelper.constant.RegexString;
-import cn.jxzhang.campushelper.constant.RequestAddress;
+import cn.jxzhang.campushelper.constant.Urls;
 import cn.jxzhang.campushelper.model.ResponseMessage;
 import cn.jxzhang.campushelper.model.User;
 import cn.jxzhang.campushelper.util.JsonUtils;
@@ -97,7 +97,7 @@ public class RegisterWithEmailActivity extends BaseAppCompatActivity {
         User user = new User();
         user.setIdentifier(mRegisterEmail.getText().toString());
         user.setIdentityType(IdentityType.EMAIL.value());
-        OkGo.post(RequestAddress.IS_ACCOUNT_EXIST.value())
+        OkGo.post(Urls.IS_ACCOUNT_EXIST.value())
                 .tag(this)
                 .upJson(JsonUtils.toJson(user))
                 .execute(new StringCallback() {
