@@ -1,8 +1,11 @@
 package cn.jxzhang.campushelper.base;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 
 import butterknife.ButterKnife;
 
@@ -24,4 +27,15 @@ public abstract class  BaseActivity extends Activity {
     }
 
     protected abstract int getContentView();
+
+    public void showErrorDialog(String message, Context context) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setMessage(message).setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // FIRE ZE MISSILES!
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 }

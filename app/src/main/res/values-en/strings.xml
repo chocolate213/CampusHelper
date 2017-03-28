@@ -42,4 +42,10 @@
     <string name="after_second_resend">%d S后重发</string>
     <string name="title_input_password">Phone Sign up</string>
     <string name="text_this_is_the_login_password">该密码将用于登陆你的校园助手账号</string>
+    <string name="send_email_to_account_text">验证码已发送至邮箱账户：%s</string>
+    <string name="send_sms_to_account_text">验证码已发送至手机号：%s</string>
+    <string name="prompt_forget_password_confirm_password">确认密码（不少于6位）</string>
+    <string name="prompt_forget_password_password">请输入密码（不少于6位）</string>
+    <string name="text_finish">完成</string>
+    <string name="title_activity_reset_password_success">密码重置成功</string>
 </resources>

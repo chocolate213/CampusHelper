@@ -35,7 +35,6 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     protected abstract int getContentView();
 
     public void showErrorDialog(String message, Context context) {
-        Log.v("log", "log");
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setMessage(message).setPositiveButton("确定", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {

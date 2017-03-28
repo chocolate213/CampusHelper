@@ -22,7 +22,7 @@ import cn.jxzhang.campushelper.util.ToastUtils;
 import okhttp3.Call;
 import okhttp3.Response;
 
-public class InputPasswordActivity extends BaseAppCompatActivity {
+public class RegistWithEmailConfirmPasswordActivity extends BaseAppCompatActivity {
 
     @BindView(R.id.regist_phone_password)
     EditText mPasswordEditText;
@@ -84,16 +84,16 @@ public class InputPasswordActivity extends BaseAppCompatActivity {
                     public void onSuccess(String s, Call call, Response response) {
                         ResponseMessage result = JsonUtils.fromJson(s, ResponseMessage.class);
                         if (result.isSuccess()) {
-                            ToastUtils.toast(InputPasswordActivity.this, "注册成功");
+                            ToastUtils.toast(RegistWithEmailConfirmPasswordActivity.this, "注册成功");
                         } else {
-                            showErrorDialog(result.getMessage(), InputPasswordActivity.this);
+                            showErrorDialog(result.getMessage(), RegistWithEmailConfirmPasswordActivity.this);
                         }
                     }
 
                     @Override
                     public void onError(Call call, Response response, Exception e) {
                         super.onError(call, response, e);
-                        showErrorDialog(e.getMessage(), InputPasswordActivity.this);
+                        showErrorDialog(e.getMessage(), RegistWithEmailConfirmPasswordActivity.this);
                     }
                 });
     }

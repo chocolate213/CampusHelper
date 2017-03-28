@@ -28,6 +28,20 @@ public class ToastUtils {
     }
 
     /**
+     * Show the given message in a {@link Toast}
+     * <p>
+     * This method may be called from any thread
+     *
+     * @param context  Activity
+     * @param message   message to show.
+     */
+    public static void toastLong(final Context context, final String message) {
+        Toast.makeText(context,message,Toast.LENGTH_LONG).show();
+    }
+
+
+
+    /**
      * Show the message with the given resource id in a {@link Toast}
      * <p>
      * This method may be called from any thread

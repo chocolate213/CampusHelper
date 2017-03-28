@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.gson.reflect.TypeToken;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 
@@ -118,11 +119,12 @@ public class RegisterWithPhoneActivity extends BaseAppCompatActivity {
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(String s, Call call, Response response) {
-                        ResponseMessage result = JsonUtils.fromJson(s, ResponseMessage.class);
+                        ResponseMessage<User> result = JsonUtils.fromJson(s, new TypeToken<ResponseMessage<User>>(){}.getType());
                         if (result.isSuccess()) {
-                            if (result.getResult() instanceof String) {
-                                String code = (String) result.getResult();
-                                ToastUtils.toast(RegisterWithPhoneActivity.this, "自动识别短信验证码 ： " + code);
+                            if (result.getResult() != null) {
+                                User user = result.getResult();
+                                String code = user.getVerifyCode();
+                                ToastUtils.toastLong(RegisterWithPhoneActivity.this, "自动识别短信验证码 ： " + code);
                                 SEND_VERIFY_CODE_FLAG = true;
                             } else {
                                 showErrorDialog("验证码请求失败", RegisterWithPhoneActivity.this);
@@ -155,7 +157,7 @@ public class RegisterWithPhoneActivity extends BaseAppCompatActivity {
 
     private void goInputPassword() {
         String phone = mPhoneNumber.getText().toString();
-        Intent intent = new Intent(RegisterWithPhoneActivity.this, InputPasswordActivity.class);
+        Intent intent = new Intent(RegisterWithPhoneActivity.this, RegistWithEmailConfirmPasswordActivity.class);
         intent.putExtra("phone", phone);
         startActivity(intent);
         finish();

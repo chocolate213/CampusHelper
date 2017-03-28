@@ -17,13 +17,19 @@ public enum Urls {
 
     SIGN_UP("/account/signUp"),
 
-    SEND_VERIFY_CODE("/account/verifyCode/generateVerifyCode"),
+    SIGN_IN("/account/signIn"),
 
-    VERIFY_VERIFY_CODE("/account/verifyCode/verifyVerifyCode");
+    SEND_VERIFY_CODE("/account/sendVerifyCode"),
+
+    VERIFY_VERIFY_CODE("/account/verifyVerifyCode"),
+
+    GET_ACCOUNT_TYPE("/account/getAccountType"),
+
+    RESET_PASSWORD("/account/resetPassword");
 
     private final String value;
 
-    private final String REMOTE_SERVICE_URL = "http://192.168.0.101:8080/";
+    private final String REMOTE_SERVICE_URL = "http://192.168.10.105:8080/";
 
     private final String SERVER_CONTEXT_PATH = "CampusHelper";
 
@@ -35,5 +41,10 @@ public enum Urls {
         String url = REMOTE_SERVICE_URL + SERVER_CONTEXT_PATH + this.value;
         Log.d("Request URL : ", url);
         return url;
+    }
+
+    @Override
+    public String toString() {
+        return value();
     }
 }
