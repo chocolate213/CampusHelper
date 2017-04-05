@@ -29,4 +29,10 @@
     <color name="color_grey_666">#666666</color>
     <color name="color_grey_333">#333333</color>
 
+    <color name="primary_background_color">#FAFAFA</color>
+    <color name="primary_font_color">#313131</color>
+
+    <color name="normal" >#eae8e8</color>
+    <color name="press" >#bcb2b2</color>
+
 </resources>

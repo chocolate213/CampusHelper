@@ -8,6 +8,11 @@ package cn.jxzhang.campushelper.open;
  */
 public class Constants {
 
+    /**
+     * Email地址
+     */
+    public static final String[] ADDRESS = {"chocolatepie213@gmail.com"};
+
     /** 当前 DEMO 应用的 APP_KEY，第三方应用应该使用自己的 APP_KEY 替换该 APP_KEY */
     public static final String APP_KEY      = "972672582";
 

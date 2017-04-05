@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:divider="@drawable/list_divider"
+        android:dividerHeight="@dimen/list_divider_width"
+        android:footerDividersEnabled="false"
+        android:id="@+id/contact_list"
+        android:layout_marginBottom="60dp"/>
+
+    <cn.jxzhang.campushelper.view.SideBarView
+        android:id="@+id/contact_sidebar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="60dp"/>
+
+    <TextView
+        android:id="@+id/contact_tip"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:textSize="52sp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:background="@drawable/item_tip_bg"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_current_version">校园助手 2.0.0 beta</string>
+    <string name="text_setting_setting">设置</string>
+    <string name="text_setting_update_log">更新日志</string>
+    <string name="text_setting_switch_account">切换账号</string>
+    <string name="text_setting_about">关于校园助手</string>
+    <string name="text_setting_help_feedback">帮助与反馈</string>
+    <string name="text_setting_exist">退出</string>
+    <string name="text_setting_introduce">功能介绍</string>
+    <string name="text_setting_copyright">意见反馈：chocolatepie213@gmail.com\nDesign By Jiaxing Zhang © 2017</string>
+</resources>

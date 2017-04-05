@@ -26,6 +26,7 @@ import cn.jxzhang.campushelper.model.ResponseMessage;
 import cn.jxzhang.campushelper.model.User;
 import cn.jxzhang.campushelper.model.WeiboVO;
 import cn.jxzhang.campushelper.open.Constants;
+import cn.jxzhang.campushelper.ui.MainActivity;
 import cn.jxzhang.campushelper.util.DigestUtils;
 import cn.jxzhang.campushelper.util.JsonUtils;
 import cn.jxzhang.campushelper.util.ToastUtils;
@@ -92,7 +93,7 @@ public class LoginActivity extends BaseActivity {
 
     @OnClick(R.id.weibo_login_icon)
     public void weiboLogin() {
-        weiboSsoHandler.authorizeClientSso(new AuthListener());
+        weiboSsoHandler. authorizeClientSso(new AuthListener());
     }
 
     @OnClick(R.id.weixin_login_icon)
@@ -149,6 +150,9 @@ public class LoginActivity extends BaseActivity {
                                 User user = result.getResult();
                                 saveUser(user);
                                 ToastUtils.toast(LoginActivity.this, "登陆成功");
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                startActivity(intent);
+                                finish();
                             }
                         } else {
                             showErrorDialog(result.getMessage(), LoginActivity.this);

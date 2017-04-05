@@ -72,4 +72,8 @@
     <string name="text_finish">Finish</string>
     <string name="title_activity_reset_password_success">密码重置成功</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="contact_start">A</string>
 </resources>
