@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="134dp"
+    android:layout_marginBottom="10dp"
+    android:elevation="1dp"
+    card_view:cardElevation="0dp"
+    card_view:cardMaxElevation="2dp"
+    card_view:cardBackgroundColor="#FDFDFD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/article_container"
+            android:layout_width="260dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/article_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:maxLines="2"
+                android:textSize="22.5sp"
+                android:ellipsize="end"
+                android:textColor="#303030"
+                android:text="Germany Threatens Social Media Companies with The Platform" />
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/article_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="5dp"
+                android:maxLines="2"
+                android:textSize="16.7sp"
+                android:ellipsize="end"
+                android:textColor="#a8a8a8"
+                android:text="Germany Threatens Social Media Companies with The Platform" />
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/article_footer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:maxLines="2"
+                android:textSize="12sp"
+                android:ellipsize="end"
+                android:textColor="#bdbdbd"
+                android:text="难度 ： 高考 四级 | 单词数 : 299 | 读后感 ：0" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/article_image"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="9dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/article_image1"/>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

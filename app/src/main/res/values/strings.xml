@@ -1,7 +1,7 @@
 <resources>
     <string name="application_name">CampusHelper</string>
 
-    <string name="tab_home">主页</string>
+    <string name="tab_home">新鲜事</string>
     <string name="tab_contacts">通讯录</string>
     <string name="tab_discover">发现</string>
     <string name="tab_me">我</string>

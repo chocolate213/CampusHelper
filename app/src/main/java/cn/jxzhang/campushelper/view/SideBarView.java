@@ -42,7 +42,6 @@ public class SideBarView extends View {
     private Paint paint;
     private Paint paintSelect;
 
-
     private int height;
     private int width;
     private int perHeight;

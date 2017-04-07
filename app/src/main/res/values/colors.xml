@@ -13,6 +13,11 @@
     <color name="color_tab_4">#6C4A42</color>
     <color name="color_tab_5">#F63D2B</color>
 
+    <color name="refresh_color_1">#00886A</color>
+    <color name="refresh_color_2">#F63D2B</color>
+    <color name="refresh_color_3">#ffcd33</color>
+    <color name="refresh_color_4">#6C4A42</color>
+
     <color name="color_notification_back">#ffcd33</color>
     <color name="color_notification_text">#3E4757</color>
 

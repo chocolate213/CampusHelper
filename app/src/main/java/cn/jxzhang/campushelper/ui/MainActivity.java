@@ -1,7 +1,6 @@
 package cn.jxzhang.campushelper.ui;
 
 import android.graphics.Color;
-import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +14,7 @@ import butterknife.BindView;
 import cn.jxzhang.campushelper.R;
 import cn.jxzhang.campushelper.adapter.NavigationViewPagerAdapter;
 import cn.jxzhang.campushelper.base.BaseAppCompatActivity;
+import cn.jxzhang.campushelper.ui.navigation.HomeFragment;
 
 public class MainActivity extends BaseAppCompatActivity {
 
@@ -26,7 +26,7 @@ public class MainActivity extends BaseAppCompatActivity {
 
     private NavigationViewPagerAdapter adapter;
 
-    private static final int CURRENT_PAGE = 1;
+    private static final int CURRENT_PAGE = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,12 +74,12 @@ public class MainActivity extends BaseAppCompatActivity {
         bottomNavigation.setNotificationBackgroundColor(Color.parseColor("#F63D2B"));
 
         AHNotification notification = new AHNotification.Builder()
-                .setText("10")
+                .setText("3")
                 .setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.color_notification_back))
                 .setTextColor(ContextCompat.getColor(MainActivity.this, R.color.color_notification_text))
                 .build();
 
-        bottomNavigation.setNotification(notification, 1);
+        bottomNavigation.setNotification(notification, 0);
 
         bottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
             @Override

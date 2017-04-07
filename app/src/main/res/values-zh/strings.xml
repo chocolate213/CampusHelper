@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="tab_home">主页</string>
+    <string name="tab_home">新鲜事</string>
     <string name="tab_contacts">联系人</string>
     <string name="tab_discover">发现</string>
     <string name="tab_me">我</string>
