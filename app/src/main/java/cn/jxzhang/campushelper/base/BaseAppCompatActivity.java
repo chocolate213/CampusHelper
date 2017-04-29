@@ -2,6 +2,7 @@ package cn.jxzhang.campushelper.base;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
@@ -55,6 +56,12 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
         actionBar.setTitle(title);
     }
 
+    protected void showActionBar() {
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setDisplayHomeAsUpEnabled(true);
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case android.R.id.home:
@@ -64,5 +71,11 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    protected void startTargetActivity(Class activity){
+        Intent intent = new Intent();
+        intent.setClass(this, activity);
+        startActivity(intent);
     }
 }

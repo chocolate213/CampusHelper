@@ -76,4 +76,23 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="contact_start">A</string>
+    <string name="menu_item_new_message_alert">新消息提醒</string>
+    <string name="menu_item_quiet_mode">勿扰模式</string>
+    <string name="menu_item_account_and_safety">账号与安全</string>
+    <string name="activity_title_setting">设置</string>
+    <string name="action_on">开</string>
+    <string name="action_off">关</string>
+    <string name="text_auto_refresh_time">自动刷新频率为5分钟</string>
+    <string name="menu_item_auto_refresh">自动刷新教务网成绩</string>
+    <string name="menu_item_recv_msg">接收推送消息</string>
+    <string name="menu_desc_recv_msg">接收校园信息或通知</string>
+    <string name="activity_title_new_msg_alert">新消息提醒</string>
+    <string name="menu_text_vibrator">震动</string>
+    <string name="menu_text_sound">声音</string>
+    <string name="menu_desc_new_message">若关闭，当接收到校园通知消息时，通知提示将不显示发信人和内容摘要。</string>
+    <string name="menu_text_show_message_detail">通知显示消息详情</string>
+    <string name="menu_text_recv_new_message">接收新消息通知</string>
+    <string name="activity_title_quite_mode">勿扰模式</string>
+    <string name="activity_title_account_and_safety">账号与安全</string>
+    <string name="activity_title_personal_info">个人信息</string>
 </resources>

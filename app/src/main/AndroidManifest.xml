@@ -69,7 +69,23 @@
         <activity android:name=".ui.setting.LogActivity" />
         <activity android:name=".ui.setting.AboutActivity" />
         <activity android:name=".ui.setting.HelpAndFeedbackActivity" />
-        <activity android:name=".ui.setting.FeatureActivity"></activity>
+        <activity android:name=".ui.setting.FeatureActivity" />
+        <activity
+            android:name=".ui.setting.SettingActivity"
+            android:label="@string/activity_title_setting" />
+        <activity
+            android:name=".ui.setting.NewMessageAlertActivity"
+            android:label="@string/activity_title_new_msg_alert" />
+        <activity
+            android:name=".ui.setting.QuiteModeActivity"
+            android:label="@string/activity_title_quite_mode" />
+        <activity
+            android:name=".ui.setting.AccountAndSafetyActivity"
+            android:label="@string/activity_title_account_and_safety" />
+        <activity
+            android:name=".ui.setting.PersonalInfoActivity"
+            android:label="@string/activity_title_personal_info"/>
+
     </application>
 
 </manifest>

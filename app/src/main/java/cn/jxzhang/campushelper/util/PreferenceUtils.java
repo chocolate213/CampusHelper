@@ -1,6 +1,6 @@
 package cn.jxzhang.campushelper.util;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.SharedPreferences;
 
 /**
@@ -17,12 +17,10 @@ public class PreferenceUtils {
     /**
      * 获取SharedPreference
      * @param context 上下文
-     * @param fileName  SharedPreference
      * @return SharedPreference对象
      */
-    public SharedPreferences getSharedPreferences(Context context, String fileName){
-
-        return null;
+    public SharedPreferences.Editor getSharedPreferences(Activity context){
+        return context.getPreferences(Activity.MODE_PRIVATE).edit();
     }
 
     /**

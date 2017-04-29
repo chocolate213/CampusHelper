@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffebebeb"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/menu_item_auto_refresh"
+                    android:textColor="#ff333333"
+                    android:textSize="@dimen/menu_item_text_size" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:textSize="14sp"
+                    android:textColor="#ff999999"
+                    android:text="@string/text_auto_refresh_time"/>
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/switch_auto_refresh_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textOn="@string/action_on"
+                android:textOff="@string/action_off"
+                android:clickable="true"
+                android:checked="false" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider_width"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/menu_item_recv_msg"
+                    android:textColor="#ff333333"
+                    android:textSize="@dimen/menu_item_text_size" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:textSize="14sp"
+                    android:textColor="#ff999999"
+                    android:text="@string/menu_desc_recv_msg"/>
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/switch_recv_campus_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textOn="@string/action_on"
+                android:textOff="@string/action_off"
+                android:clickable="true"
+                android:checked="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/action_new_msg_alert"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/menu_item_padding"
+            android:paddingTop="@dimen/menu_item_padding"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:text="@string/menu_item_new_message_alert"
+            android:textColor="#ff333333"
+            android:textSize="@dimen/menu_item_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider_width"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/action_quiet_mode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/menu_item_padding"
+            android:paddingTop="@dimen/menu_item_padding"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:text="@string/menu_item_quiet_mode"
+            android:textColor="#ff333333"
+            android:textSize="@dimen/menu_item_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider_width"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/action_account_and_safety"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/menu_item_padding"
+                    android:paddingTop="@dimen/menu_item_padding"
+                    android:gravity="center_vertical"
+                    android:text="@string/menu_item_account_and_safety"
+                    android:textColor="#ff333333"
+                    android:textSize="@dimen/menu_item_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/color_grey_999"
+                android:text="已保护"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

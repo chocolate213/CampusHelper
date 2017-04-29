@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:text="巧克力派213"
                 android:textColor="#2e2e2e"
-                android:textSize="17sp" />
+                android:textSize="@dimen/menu_item_text_size" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
             android:gravity="center_vertical"
             android:text="@string/text_setting_setting"
             android:textColor="@color/primary_font_color"
-            android:textSize="17sp" />
+            android:textSize="@dimen/menu_item_text_size" />
     </LinearLayout>
 
     <LinearLayout
@@ -92,7 +92,7 @@
             android:gravity="center_vertical"
             android:text="@string/text_setting_update_log"
             android:textColor="@color/primary_font_color"
-            android:textSize="17sp" />
+            android:textSize="@dimen/menu_item_text_size" />
 
         <View
             android:layout_width="match_parent"
@@ -109,7 +109,7 @@
             android:gravity="center_vertical"
             android:text="@string/text_setting_switch_account"
             android:textColor="@color/primary_font_color"
-            android:textSize="17sp" />
+            android:textSize="@dimen/menu_item_text_size" />
     </LinearLayout>
 
     <LinearLayout
@@ -148,6 +148,6 @@
             android:gravity="center_vertical"
             android:text="@string/text_setting_exist"
             android:textColor="@color/primary_font_color"
-            android:textSize="17sp" />
+            android:textSize="@dimen/menu_item_text_size" />
     </LinearLayout>
 </LinearLayout>

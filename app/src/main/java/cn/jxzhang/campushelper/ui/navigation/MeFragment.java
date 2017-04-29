@@ -12,12 +12,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.jxzhang.campushelper.R;
 import cn.jxzhang.campushelper.open.Constants;
 import cn.jxzhang.campushelper.ui.setting.AboutActivity;
 import cn.jxzhang.campushelper.ui.setting.LogActivity;
+import cn.jxzhang.campushelper.ui.setting.PersonalInfoActivity;
+import cn.jxzhang.campushelper.ui.setting.SettingActivity;
 
 public class MeFragment extends Fragment {
     private static final String PAGE_INDEX = "index";
@@ -64,8 +67,11 @@ public class MeFragment extends Fragment {
 
     }
 
+    @OnClick(R.id.action_setting)
     public void actionSetting(){
-
+        Intent intent = new Intent();
+        intent.setClass(this.getActivity(), SettingActivity.class);
+        this.getActivity().startActivity(intent);
     }
 
     @OnClick(R.id.action_update_log)
@@ -75,9 +81,35 @@ public class MeFragment extends Fragment {
         this.getActivity().startActivity(intent);
     }
 
+    @OnClick(R.id.account_info)
+    public void actionPersonalInfo(){
+        Intent intent = new Intent();
+        intent.setClass(this.getActivity(), PersonalInfoActivity.class);
+        this.getActivity().startActivity(intent);
+    }
 
+    @OnClick(R.id.action_switch_account)
     public void actionSwitchAccount(){
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this.getActivity());
 
+        dialog.setTitle("切换账户");
+        dialog.setMessage("切换账号并返回登陆界面？");
+        dialog.setCancelable(false);
+        dialog.setNegativeButton("确认", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                MeFragment.this.getActivity().finish();
+            }
+        });
+
+        dialog.setPositiveButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        dialog.show();
     }
 
     @OnClick(R.id.action_about)
