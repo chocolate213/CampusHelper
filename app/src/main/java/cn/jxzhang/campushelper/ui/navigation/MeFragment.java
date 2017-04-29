@@ -1,13 +1,23 @@
 package cn.jxzhang.campushelper.ui.navigation;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import cn.jxzhang.campushelper.R;
+import cn.jxzhang.campushelper.open.Constants;
+import cn.jxzhang.campushelper.ui.setting.AboutActivity;
+import cn.jxzhang.campushelper.ui.setting.LogActivity;
 
 public class MeFragment extends Fragment {
     private static final String PAGE_INDEX = "index";
@@ -58,23 +68,46 @@ public class MeFragment extends Fragment {
 
     }
 
+    @OnClick(R.id.action_update_log)
     public void actionUpdateLog(){
-
+        Intent intent = new Intent();
+        intent.setClass(this.getActivity(), LogActivity.class);
+        this.getActivity().startActivity(intent);
     }
+
 
     public void actionSwitchAccount(){
 
     }
 
+    @OnClick(R.id.action_about)
     public void actionAbout(){
-
+        Intent intent = new Intent();
+        intent.setClass(this.getActivity(), AboutActivity.class);
+        this.getActivity().startActivity(intent);
     }
 
-    public void actionHelpAndFeedback(){
-
-    }
-
+    @OnClick(R.id.text_finish_all_activity)
     public void actionExist(){
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this.getActivity());
 
+        dialog.setTitle("退出");
+        dialog.setMessage("确认退出？");
+        dialog.setCancelable(false);
+        dialog.setNegativeButton("确认", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                MeFragment.this.getActivity().finish();
+            }
+        });
+
+        dialog.setPositiveButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        dialog.show();
     }
 }
