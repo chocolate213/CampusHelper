@@ -29,9 +29,9 @@ public enum Urls {
 
     private final String value;
 
-    private final String REMOTE_SERVICE_URL = "http://192.168.10.105:8080/";
+    private final String REMOTE_SERVICE_URL = "http://www.jxzhang.cn/";
 
-    private final String SERVER_CONTEXT_PATH = "CampusHelper";
+    private final String SERVER_CONTEXT_PATH = "campus-helper-server";
 
     Urls(String value) {
         this.value = value;

@@ -2,6 +2,8 @@ package cn.jxzhang.campushelper;
 
 import org.junit.Test;
 
+import cn.jxzhang.campushelper.util.DigestUtils;
+
 import static org.junit.Assert.*;
 
 /**
@@ -13,5 +15,11 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
+    }
+
+    @Test
+    public void testMd5() throws Exception {
+        String s = DigestUtils.md5DigestAsHex("123456");
+        System.out.println(s);
     }
 }

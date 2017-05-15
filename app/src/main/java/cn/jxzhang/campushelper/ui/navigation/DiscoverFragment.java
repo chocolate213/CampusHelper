@@ -15,6 +15,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.jxzhang.campushelper.R;
 import cn.jxzhang.campushelper.ui.query.CETActivity;
+import cn.jxzhang.campushelper.ui.query.LibraryActivity;
 import cn.jxzhang.campushelper.ui.setting.AboutActivity;
 import cn.jxzhang.campushelper.util.TextUtils;
 import cn.jxzhang.campushelper.util.ToastUtils;
@@ -88,7 +89,9 @@ public class DiscoverFragment extends Fragment {
 
     @OnClick(R.id.action_library)
     public void actionLibrary(){
-        ToastUtils.toast(this.getActivity(),"教务网暂未开放外网链接！");
+        Intent intent = new Intent();
+        intent.setClass(this.getActivity(), LibraryActivity.class);
+        this.getActivity().startActivity(intent);
     }
 
     @OnClick(R.id.action_computer)

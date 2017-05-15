@@ -88,7 +88,18 @@
         <activity
             android:name=".ui.query.CETActivity"
             android:label="@string/activity_title_cet" />
-        <activity android:name=".ui.query.CETInfoActivity"></activity>
+        <activity android:name=".ui.query.CETInfoActivity" />
+        <activity android:name=".ui.query.LibraryActivity" />
+        <activity android:name=".ui.query.BookListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity android:name=".ui.query.BookInfoActivity"></activity>
     </application>
 
 </manifest>

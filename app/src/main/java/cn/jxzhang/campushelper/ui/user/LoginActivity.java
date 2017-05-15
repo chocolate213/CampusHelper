@@ -122,10 +122,7 @@ public class LoginActivity extends BaseActivity {
             return;
         }
 
-        password = DigestUtils.md5DigestAsHex(password);
-
         login(account, password);
-
     }
 
     /**

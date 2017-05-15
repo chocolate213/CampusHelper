@@ -98,4 +98,9 @@
     <string name="text_start_time">开始时间</string>
     <string name="text_end_time">结束时间</string>
     <string name="activity_title_cet">CET成绩查询</string>
+    <string name="searching_books">正在玩儿命请求服务器，亲稍安勿躁...</string>
+    <string name="error_page_info_1">• 检查书名是否正确并尝试重新检索</string>
+    <string name="error_page_info_2">• 检查网络信号或者数据连接是否正常</string>
+    <string name="error_page_info_3">• 如果还是有问题的话要不...重启试试？</string>
+    <string name="error_page_title">呃...貌似出了点小问题...</string>
 </resources>
