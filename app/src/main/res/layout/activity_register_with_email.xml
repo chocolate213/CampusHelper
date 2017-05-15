@@ -40,7 +40,6 @@
                 android:id="@+id/register_username_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="chocolate213"
                 android:hint="@string/prompt_username"
                 android:drawablePadding="10dp"
                 android:drawableStart="@drawable/biz_icon_user"
@@ -56,7 +55,6 @@
             <EditText
                 android:id="@+id/register_email_edit"
                 android:layout_width="match_parent"
-                android:text="528197008@qq.com"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_email"
                 android:drawablePadding="10dp"
@@ -75,7 +73,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_password"
-                android:text="123456"
                 android:drawablePadding="10dp"
                 android:drawableStart="@drawable/biz_icon_password"
                 android:inputType="textPassword"
@@ -94,7 +91,6 @@
                 android:drawableStart="@drawable/biz_icon_confirm_password"
                 android:hint="@string/prompt_confirm_password"
                 android:drawablePadding="10dp"
-                android:text="123456"
                 android:inputType="textPassword"
                 android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>

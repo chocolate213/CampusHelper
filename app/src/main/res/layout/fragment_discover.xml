@@ -19,8 +19,8 @@
             android:id="@+id/action_check_in"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/menu_item_padding"
-            android:layout_marginTop="@dimen/menu_item_padding"
+            android:paddingBottom="@dimen/menu_item_padding"
+            android:paddingTop="@dimen/menu_item_padding"
             android:clickable="true"
             android:gravity="center_vertical"
             android:text="签到"
@@ -34,10 +34,11 @@
             android:background="?android:attr/listDivider" />
 
         <TextView
+            android:id="@+id/action_grades"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/menu_item_padding"
-            android:layout_marginTop="@dimen/menu_item_padding"
+            android:paddingBottom="@dimen/menu_item_padding"
+            android:paddingTop="@dimen/menu_item_padding"
             android:clickable="true"
             android:gravity="center_vertical"
             android:text="成绩"
@@ -50,10 +51,11 @@
             android:background="?android:attr/listDivider" />
 
         <TextView
+            android:id="@+id/action_time_table"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/menu_item_padding"
-            android:layout_marginTop="@dimen/menu_item_padding"
+            android:paddingBottom="@dimen/menu_item_padding"
+            android:paddingTop="@dimen/menu_item_padding"
             android:clickable="true"
             android:gravity="center_vertical"
             android:text="课表"
@@ -83,35 +85,16 @@
         android:paddingRight="16dp">
 
         <TextView
-            android:id="@+id/action_book"
+            android:id="@+id/action_library"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/menu_item_padding"
-            android:layout_marginTop="@dimen/menu_item_padding"
-            android:clickable="true"
-            android:gravity="center_vertical"
-            android:text="我的图书"
-            android:textColor="#ff333333"
-            android:textSize="16sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/list_divider_width"
-            android:background="?android:attr/listDivider" />
-
-        <TextView
-            android:id="@+id/school_info_library"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/menu_item_padding"
-            android:layout_marginTop="@dimen/menu_item_padding"
+            android:paddingBottom="@dimen/menu_item_padding"
+            android:paddingTop="@dimen/menu_item_padding"
             android:clickable="true"
             android:gravity="center_vertical"
             android:text="图书馆馆藏图书查询"
             android:textColor="#ff333333"
             android:textSize="16sp" />
-
-
     </LinearLayout>
 
     <TextView
@@ -135,13 +118,13 @@
         android:paddingRight="16dp">
 
         <TextView
-            android:id="@+id/school_info_english"
+            android:id="@+id/action_cet"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/menu_item_padding"
-            android:layout_marginTop="@dimen/menu_item_padding"
             android:clickable="true"
             android:gravity="center_vertical"
+            android:paddingBottom="@dimen/menu_item_padding"
+            android:paddingTop="@dimen/menu_item_padding"
             android:text="英语四六级分数查询"
             android:textColor="#ff333333"
             android:textSize="16sp" />
@@ -152,11 +135,11 @@
             android:background="?android:attr/listDivider" />
 
         <TextView
-            android:id="@+id/school_info_standard_chinese"
+            android:id="@+id/action_standard_chinese"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/menu_item_padding"
-            android:layout_marginTop="@dimen/menu_item_padding"
+            android:paddingBottom="@dimen/menu_item_padding"
+            android:paddingTop="@dimen/menu_item_padding"
             android:clickable="true"
             android:gravity="center_vertical"
             android:text="普通话水平测试分数查询"
@@ -169,15 +152,18 @@
             android:background="?android:attr/listDivider" />
 
         <TextView
-            android:id="@+id/school_info_computer"
+            android:id="@+id/action_computer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/menu_item_padding"
-            android:layout_marginTop="@dimen/menu_item_padding"
+            android:paddingBottom="@dimen/menu_item_padding"
+            android:paddingTop="@dimen/menu_item_padding"
             android:clickable="true"
             android:gravity="center_vertical"
             android:text="全国计算机等级考试分数查询"
             android:textColor="#ff333333"
             android:textSize="16sp" />
     </LinearLayout>
+
+
+
 </LinearLayout>

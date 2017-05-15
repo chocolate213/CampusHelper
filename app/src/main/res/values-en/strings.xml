@@ -61,4 +61,7 @@
     <string name="activity_title_new_msg_alert">新消息提醒</string>
     <string name="menu_text_vibrator">震动</string>
     <string name="activity_title_personal_info">个人信息</string>
+    <string name="text_start_time">开始时间</string>
+    <string name="text_end_time">结束时间</string>
+    <string name="activity_title_cet">CET成绩查询</string>
 </resources>

@@ -95,4 +95,7 @@
     <string name="activity_title_quite_mode">勿扰模式</string>
     <string name="activity_title_account_and_safety">账号与安全</string>
     <string name="activity_title_personal_info">个人信息</string>
+    <string name="text_start_time">开始时间</string>
+    <string name="text_end_time">结束时间</string>
+    <string name="activity_title_cet">CET成绩查询</string>
 </resources>

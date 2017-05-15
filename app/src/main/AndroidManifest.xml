@@ -84,8 +84,11 @@
             android:label="@string/activity_title_account_and_safety" />
         <activity
             android:name=".ui.setting.PersonalInfoActivity"
-            android:label="@string/activity_title_personal_info"/>
-
+            android:label="@string/activity_title_personal_info" />
+        <activity
+            android:name=".ui.query.CETActivity"
+            android:label="@string/activity_title_cet" />
+        <activity android:name=".ui.query.CETInfoActivity"></activity>
     </application>
 
 </manifest>

@@ -1,8 +1,10 @@
 package cn.jxzhang.campushelper.ui.navigation;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -61,10 +63,6 @@ public class MeFragment extends Fragment {
         ButterKnife.bind(this, inflate);
         // Inflate the layout for this fragment
         return inflate;
-    }
-
-    public void actionAccount() {
-
     }
 
     @OnClick(R.id.action_setting)
